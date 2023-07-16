@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import Child from "./Child";
 
-export default function parent() {
+export default function Parent() {
   const [color, setColor] = useState("");
 
   function handleColor(e) {
@@ -9,8 +10,15 @@ export default function parent() {
 
   return (
     <div>
-      <div style={{ backgroundColor: `${color}` }}></div>
-      <child newColor={color} handleColor={handleColor} />
+      <div
+        style={{
+          backgroundColor: `${color}`,
+          width: "200px",
+          height: "200px",
+          margin: "0 auto",
+        }}
+      ></div>
+      <Child newColor={color} handleColor={handleColor} />
     </div>
   );
 }
