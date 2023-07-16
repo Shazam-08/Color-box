@@ -1,3 +1,4 @@
+
 # Color Change App
 
 This is a simple React application that allows users to change the background color of a parent div based on the input value provided in a child component.
@@ -38,5 +39,6 @@ You can customize this application by modifying the following parts:
 
 - **Styling**: The parent and child components have their respective CSS classes defined in the `App.css` and `Child.css` files. Feel free to modify the styles as per your preference.
 - **Input Validation**: Currently, the application does not perform any input validation for the color value entered. You can enhance the input validation logic in the `handleColor` function to enforce specific color formats or add error handling.
+
 
 
