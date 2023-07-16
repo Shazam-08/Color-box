@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Color Change App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple React application that allows users to change the background color of a parent div based on the input value provided in a child component.
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+To get started with this project, follow these steps:
 
-### `npm start`
+1. Clone the repository: `git clone <repository-url>`
+2. Navigate to the project directory: `cd color-change-app`
+3. Install the dependencies: `npm install`
+4. Start the development server: `npm start`
+5. Open your browser and visit `http://localhost:3000` to see the application running.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Project Structure
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The project consists of two components:
 
-### `npm test`
+### Parent Component
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The `App` component is the parent component that renders the main application. It manages the state of the color value using the `useState` hook. The `handleColor` function is responsible for updating the color state based on the input value provided by the child component. The parent component renders a `<div>` element with a dynamic background color determined by the `color` state. It also renders the `Child` component, passing the `handleColor` function and `color` state as props.
 
-### `npm run build`
+### Child Component
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The `Child` component is a child component that receives the `handleColor` function and `newColor` prop from the parent component. It renders an `<input>` element of type text with the `newColor` prop set as its value. The `onChange` event triggers the `handleColor` function in the parent component, updating the color value.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Upon loading the application, you will see a parent `<div>` element with an initial background color.
+2. In the child component, there is an input field where you can enter a color value.
+3. As you type in the input field, the parent `<div>` element's background color will update in real-time based on the value entered.
+4. The background color will reflect the last valid color value entered in the input field.
+5. Experiment with different color names, hex codes, or RGB values to see the changes.
 
-### `npm run eject`
+## Customization
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+You can customize this application by modifying the following parts:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Styling**: The parent and child components have their respective CSS classes defined in the `App.css` and `Child.css` files. Feel free to modify the styles as per your preference.
+- **Input Validation**: Currently, the application does not perform any input validation for the color value entered. You can enhance the input validation logic in the `handleColor` function to enforce specific color formats or add error handling.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
